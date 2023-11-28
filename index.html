@@ -1,222 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>2ro</title>
-        <style>
-            body{
-                max-height: max-content; max-width: max-content;
-                font-family:Arial, Helvetica, sans-serif;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                color: #fff;
-                overflow-y: scroll; 
-                background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDd1OTgyMXF0cnA3MXZlcDFoNGszZ3k5bWIyd3Y2c25vam5pZmFiNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2KcumHTNyWYSgD3Vxe/giphy.gif); background-size: 100%;
-            }
-            img{
-                width: 470px;
-                height: 470px;
-                border-radius: 50px;
-                box-shadow: #fff;
-                padding-right: 10px; padding-left: 20px; padding-top: 20px;
-            }
-            header{
-                text-align:center;
-                font-size: 20px; 
-                padding: 1px 0;
-                background-image: url(https://media4.giphy.com/media/3ohs83tbZAQDj23ku4/200w.webp?cid=ecf05e47nhwgndza223s5jl77cs3h6x3uqex0q29v9e1s1r8&ep=v1_gifs_related&rid=200w.webp&ct=g);
-            }
-            h1{     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2ro</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            overflow-y: scroll; align-items: center;
+            justify-content: center;
+            background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGQxNWNpejR4emFieTV2dDZhdWQyYW1mYmJ6NGl0eGxmOHg5b2l2OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K0NUUooKjAaOZ7ZYRn/giphy.gif); background-size: 100%;
+        }
+
+        header {
+            text-align: center; justify-content: center; 
+            font-size: 20px;
+            padding: 2px;
+            background-image: url(https://media1.giphy.com/media/3oEdv3UJXVHMPmy0HC/200w.webp?cid=ecf05e47o6bjc6h3rp63im3qlynueoep5lvkwci3yxh9ovk1&ep=v1_gifs_related&rid=200w.webp&ct=g);
+        }
+        h1{     
                 text-align: center; align-items: center;
                 font-size: 50px;
                 font-style: normal; 
                 padding: px;
                 color: lightblue;
             }
-            h2{
-                text-align: center; align-items: center; color; margin-left: 40%;margin-right: 40%;
+         h3{
+                text-align: center; justify-content: center; align-items: center; font-family: Arial, Helvetica, sans-serif; color: #000000;
+                font-size: 20px; font-weight: lighter; border-color: lightblue; background-color: #ffffff;
+                border: 2px solid; border-radius: 20px; margin-top: 2%;  width: 20%; margin-right: 40%; margin-left: 35%;
+                padding: 10px;
+            }
+        nav {
+            background-color: lightblue;
+            padding: 5px;
+            position: fixed;
+            box-shadow: 4px 4px 4px rgb(235, 235, 235);
+            text-align: center;
+            width: 100%;
+            transition: top 0.3s;
+            top: 130px;
+            z-index: 1000; 
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 7px 20px;
+            display: inline-block; 
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            border-bottom: 2px solid #000;
+        }
+
+        nav.show {
+            top: 0;
+        }
+
+        section {
+            padding: 50px 0; 
+            margin-left: 9%;
+            max-width: 100%; 
+        }
+
+        h2 {
+            text-align: center; align-items: center; color; margin-right: 20%; margin-left: 15%;
                 font-size: 50px; 
                 border: 10px solid; border-radius: 50px; border-color: lightblue; border-style:inset;
                 padding: 10px; 
-                background-image: url(https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg);
-            }
-            h3{
-                text-align: center; align-items: flex-start; font-family: Arial, Helvetica, sans-serif; color: #000000;
-                font-size: 20px; font-weight: lighter; border-color: lightblue; background-color: #ffffff;
-                border: 2px solid; border-radius: 20px; margin-top: 2%;margin-left: 43%;
-                padding: 10px; max-width: 200px; 
-            }
-            h4{
-                text-align: right; align-items: flex-start; text-align: center; font-family: Arial, Helvetica, sans-serif;
-                font-size: 25px; font-weight: lighter; font-style:oblique; border-color: 
-                padding: 20px; margin: 9%;
-            }
-            h5{
-                text-align: center; font-family: Arial, Helvetica, sans-serif; align-items: center; color: #000000;
-                font-size: 30px; font-weight: bolder; text-indent: 5%;
-                padding: 20px; margin:15%;
-            }
-            p{
-                font-size: 20px; padding: 2%; color: #ffffff;
-                line-height: 1; text-align: center; font-style: italic;
-            }
-            section{
-                padding: 50px 0;
-                margin: 20px 0;
-                max-width: fit-content; 
-                max-height: fit-content;
-            }
-            nav {
-            background-color: lightblue; padding: 5px; position: fixed; box-shadow: 4px 4px 4px rgb(235, 235, 235); 
-            text-align: center; width: 100%;
-            transition: top 0.3s; top: 130px;
-            }
-            nav a {
-            color: rgb(0, 0, 0);
-            text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: large;
-            padding: 7px 20px;
-            display: inline-block;
-             }
-            nav a:hover {
-            background-color: #ffffff; border-bottom: 2px solid#000000;
-             }
-             nav.show {
-            top: 0;
-            }
-            section{
-                max-height: fit-content; max-width: fit-content;
-            }
-            .image-container {
-            display: flex;
+                background-image: url(https://media1.giphy.com/media/3oEdv3UJXVHMPmy0HC/200w.webp?cid=ecf05e47o6bjc6h3rp63im3qlynueoep5lvkwci3yxh9ovk1&ep=v1_gifs_related&rid=200w.webp&ct=g);
+        }
+        div{
             align-items: center;
             justify-content: center;
-            margin: 10px;  } 
-            .image-container img {
-            border-radius: 50%; width: max-content;
-            margin-right: 10px; 
-            }
-            .image-container p {
-            margin: 0;
-            }
-            .social-icons {
-            display: flex; font-size: smaller;
+        }
+        img {
+            max-width: 100%; width: 290px; height: 320px; margin: 1%; margin-left: 2%;
+            border-radius: 30px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            padding: 20px; 
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 14px;
+            padding: 2%;
+            line-height: 1.5;
+            text-align: center;
+            font-style: italic; margin-left: 2%;
+            background: linear-gradient(to bottom,white,darkgray);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            } 
+        .social-icons {
+            display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px;
             border-radius: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover; 
+        }
+        .about-container {
+            display: flex; width: 90%;
+            justify-content: center;
+        }
+
+        .about-text {
+            font-size: 20px;  width: 50%; margin-left: 5%;
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: darkgray; color: rgb(0, 0, 0); padding: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .about-image {
+            width:  50%;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+       
+    </style>
+
+    <script>
+        window.onscroll = function () {
+            var navbar = document.getElementById("navbar");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                navbar.classList.add("show");
+            } else {
+                navbar.classList.remove("show");
             }
-             .social-icons i {
-            margin: 0; line-height: 10px;
-            font-size: 8px;
-            color: #ffffff; 
-            }
-            .content {
-            max-width: 400px; max-height: 100px;
-            margin: 0 auto;
-            
-            padding: -10px; margin-top: 2%; margin-bottom: 2%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-        </style>
-        <script>
-            window.onscroll = function () {
-                var navbar = document.getElementById("navbar");
-    
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    navbar.classList.add("show");
-                } else {
-                    navbar.classList.remove("show");
-                }
-            };
-        </script>
-    </head>
-    <body>
-        <header>
-            <h1>TURO DOMINGO</h1>
-            <nav id="navbar">
-                <a href="#Home">Home</a>
-                <a href="#About">About  </a>
-                <a href="#Family">Family    </a>
-                <a href="#Favorites">Favorites</a>
-                <a href="#Hobbies">Hobbies  </a>
-                <a href="#Playlist">Playlist</a>
-            </nav>
-        </header>       
-    </body>
-        <body>
-                <section id="Home">
-                    <div class="image">
-                <img src="https://media0.giphy.com/media/Rwi8PF2VGuN2M/giphy.gif?cid=ecf05e47z4mtyuhz9t4b0hdo5ybr21u5ilq4ii9njco6rc4q&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Fun GIF">
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1178018235254325288/image0.jpg?ex=65749df9&is=656228f9&hm=a09bd9afaab868cdd361de93fcabe5123545586aa0d63e3a73154da5a47ee057&=&format=webp&width=600&height=600" alt="naddie">
-                <img src="https://media4.giphy.com/media/dXXujUmfpS3XG/200w.webp?cid=ecf05e471tj3az43t0pi05at6lafn7tvuqj6bv562h7cftor&ep=v1_gifs_related&rid=200w.webp&ct=g" alt="Fun GIF">
-                <div>
-                <br>
-                <H3>Scroll</H3>
-                    <H3>↓</H3>
-                </div>
-                </div>
-                </section>
-            </body>
-        <body>
-                <section id="About">
-                    <h2>About</h2>
-                    <div class="image-container">
-                        
-                                <h4 style="background-color: rgb(0, 0, 0);  margin-right: 5%; margin-top: 0%; border: solid 15px ; border-radius: 50%; padding: 80px; color: rgb(255, 255, 255); border-style: inset ;" >Welcome to my webpage!<br>
-                                     A virtual space that mirrors the essence of who I am. Here, you'll discover more of my hobbies, passions, and experiences. Feel free to explore the different sections as I share a glimpse into my life and the things that make me who I am. Thank you for visiting and being a part of this digital journey with me!</h4>
-                                     <img style="border-radius: 50%; margin-right: 11%;margin-top: -10%; padding: 0; border-style: double; border-width: 10px; padding:10px ; border-color: ; " src="https://media.discordapp.net/attachments/1050224029988028506/1173990791501324390/DSC03989.jpg" alt="naddie">
-                         </div>
-                    </section>
-        </body>
-        <body>
-            <section id="Family">
-                <h2>Family</h2>
-                    <div>
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1178016520744489050/image0.jpg?ex=65749c61&is=65622761&hm=132e5deb9b2d1e8b2e11ae1fcee2cf4e81881fdc231a7d8d55c26d6492993d45&=&format=webp&width=507&height=600" alt="Fun GIF">
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1176856262621798450/IMG_0690.jpg?ex=657063cd&is=655deecd&hm=29e13848d8ae53cd085bdb7221967904ff40f47d0b987dae26ba7a5fa818eaa2&=&format=webp&width=553&height=600" alt="naddie">
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1178016521071636581/image0.jpg?ex=65749c61&is=65622761&hm=c5647650b64977c8b17b72149ca27f3b0bb6044c2f5f9083e3dde2c316f47cb2&=&format=webp&width=552&height=600" alt="Fun GIF">
-                </div>
-            </section>
-        </body>
-        <body>
-            <section id="Favorites">
-                <h2> Favorites</h2>
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1177926029633925212/image.png?ex=6574481a&is=6561d31a&hm=dc95cba843c97028aff1a50d294ff8b52cc95cd4a794b4311c9995d0a99cfc4a&=&format=webp&width=600&height=600" alt="favorites">
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1177925717082775552/image.png?ex=657447cf&is=6561d2cf&hm=f24266464d71d13cd091e1cc4542331170608c53f43f6b8ff3ec393c337ea5be&=&format=webp&width=600&height=600" alt="favorites">
-                <img src="https://media.discordapp.net/attachments/1050224029988028506/1177926220340539522/image.png?ex=65744847&is=6561d347&hm=936c7ee068686322f217368dbe06e11c4276f15cb523eae0b09a0e9e1662d00f&=&format=webp&width=600&height=600" alt="favorites">
-            <body>
-                <section id="Hobbies">
-                    <h2>Hobbies</h2>
-                    <div>
-                <img style="height: 460px; width: 450px; border-radius: 50%; margin: 0; background-color: rgb(0, 0, 0); padding-bottom: 25px; padding-right: 25px;" src="https://i.pinimg.com/236x/5b/fa/7b/5bfa7b0e5198918e41056c9b31297fa8.jpg" alt="naddie">
-                <img style="height: 460px; width: 450px; border-radius: 50%; margin: 0; background-color: rgb(0, 0, 0); padding-bottom: 25px; padding-right: 20px;" src="https://i.pinimg.com/564x/57/76/e4/5776e470f40062d2045cbbabe263f565.jpg" alt="naddie">
-                <img style="height: 460px; width: 450px; border-radius: 50%; margin: 0; background-color: rgb(0, 0, 0); padding-bottom: 25px; padding-right: 20px;" src="https://media.discordapp.net/attachments/1050224029988028506/1178014329933672489/image.png?ex=65749a56&is=65622556&hm=8ae44b31f969527c609bb90fa1edf0dc948e1a645d226326de5d19978ffc299d&=&format=webp&width=700&height=537" alt="naddie">
-                    </div>
-                </section>
-            </body>
-            <body>
-                <section id="Playlist">
-                    <h2>Playlist</h2>
-                    <div>
-                    <iframe style="border-radius:12px; padding:1px; margin-left: 1%; align-items: center;" src="https://open.spotify.com/embed/track/2LlOeW5rVcvl3QcPNPcDus?utm_source=generator" width="720px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe style="border-radius:12px; padding:1px; margin-left: 1%; align-items: center;" src="https://open.spotify.com/embed/track/01iNOMVE89uKaurFTDZX2Y?utm_source=generator" width="720px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe style="border-radius:12px; padding:1px; margin-left: 1%; align-items: center;" src="https://open.spotify.com/embed/track/4kDjkFIzZK3MG97Y1yQ3Nm?utm_source=generator" width="720px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-                    <iframe style="border-radius:12px; padding:1px; margin-left: 1%; align-items: center;" src="https://open.spotify.com/embed/track/3iBgrkexCzVuPy4O9vx7Mf?utm_source=generator" width="720px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe style="border-radius:12px; padding:1px; margin-left: 1%; align-items: center;" src="https://open.spotify.com/embed/track/6qL5UWxRSQYml9O99ozoLv?utm_source=generator" width="720px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe style="border-radius:12px; padding:1px; margin-left: 1%; align-items: center;" src="https://open.spotify.com/embed/track/14YZcGhRR05BTYajt8f9u9?utm_source=generator" width="720px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>               
-                    </div>
-                </section>
-            </body>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/heynaddie_/" target="_blank" title="Instagram"><i class="social-icons"> <img style=" margin-left: 50px; height: 50px; width: 50px; font-size: 10px; margin-bottom: -50px;" src="https://i.pinimg.com/564x/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.jpg" alt="instagram"></i></a>
-                <a href="https://www.tiktok.com/@nadinelustre" target="_blank" title="Twitter"><i class="social-icons"><img style="height: 50px; width: 50px; font-size: 10px;margin-bottom: -50px;" src="https://i.pinimg.com/564x/ba/61/72/ba617232630fd5cfb505577a25eb8823.jpg" alt="tiktok"</i></a>
-                <a href="https://www.facebook.com/domingoturo" target="_blank" title="Facebook"><i class="social-icons"><img style="height: 50px; width: 50px; font-size: 10px;margin-bottom: -50px;" src="https://i.pinimg.com/564x/b7/63/69/b763699fd1fa3bfb374442593ae642e1.jpg" alt="facebook"</i></a>
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>TURO DOMINGO</h1>
+        <nav id="navbar">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Family">Family</a>
+            <a href="#Favorites">Favorites</a>
+            <a href="#Hobbies">Hobbies</a>
+            <a href="#Playlist">Playlist</a>
+        </nav>
+    </header>
+</body>
+<br>
+    <section id="Home">
+        <div style="margin-top:5%; align-items: center; justify-content: center; " class="image">
+            <img src="https://media0.giphy.com/media/Rwi8PF2VGuN2M/giphy.gif?cid=ecf05e47z4mtyuhz9t4b0hdo5ybr21u5ilq4ii9njco6rc4q&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Fun GIF">
+            <img src="https://media.discordapp.net/attachments/1050224029988028506/1178018235254325288/image0.jpg?ex=65749df9&is=656228f9&hm=a09bd9afaab868cdd361de93fcabe5123545586aa0d63e3a73154da5a47ee057&=&format=webp&width=600&height=600" alt="naddie">
+            <img src="https://media4.giphy.com/media/dXXujUmfpS3XG/200w.webp?cid=ecf05e471tj3az43t0pi05at6lafn7tvuqj6bv562h7cftor&ep=v1_gifs_related&rid=200w.webp&ct=g" alt="Fun GIF">
+            <div>
+            <br>
+            <H3 style="margin-top: 5%;">Scroll</H3>
+                <H3>↓</H3>
             </div>
-                <footer>
-                    <p style="padding:10px;"> Copyright © 2023 Domingo Turo. All rights reserved</p>
-                </footer>
-        </body>
+            </div>
+    </section>
+
+    <section id="About">
+            <h2>About</h2>
+            <div class="about-container">
+                <p style="margin-right:12%; align-items: center; justify-content: center;" class="about-text">
+                    Welcome to my webpage! A virtual space that mirrors the essence of who I am.
+                    Here, you'll discover more of my hobbies, passions, and experiences. Feel free to explore
+                    the different sections as I share a glimpse into my life and the things that make me who I am.
+                    Thank you for visiting and being a part of this digital journey with me!
+                </p>
+                <img style="width: 300px;" class="about-image" src="https://media.discordapp.net/attachments/1050224029988028506/1173990791501324390/DSC03989.jpg" alt="naddie">
+            </div>
+        </section>
+    </section>
+
+    <section id="Family">
+        <h2>Family</h2>
+        <div style="margin:1%; align-items: center; justify-content: center;" class="about">
+                <img style="height: 350px ;width: 290px;" src="https://media.discordapp.net/attachments/1050224029988028506/1178016520744489050/image0.jpg?ex=65749c61&is=65622761&hm=132e5deb9b2d1e8b2e11ae1fcee2cf4e81881fdc231a7d8d55c26d6492993d45&=&format=webp&width=507&height=600" alt="Fun GIF">
+                <img style="height: 350px ;width: 290px;" src="https://media.discordapp.net/attachments/1050224029988028506/1176856262621798450/IMG_0690.jpg?ex=657063cd&is=655deecd&hm=29e13848d8ae53cd085bdb7221967904ff40f47d0b987dae26ba7a5fa818eaa2&=&format=webp&width=553&height=600" alt="naddie">
+                <img style="height: 350px ;width: 290px;"src="https://media.discordapp.net/attachments/1050224029988028506/1178016521071636581/image0.jpg?ex=65749c61&is=65622761&hm=c5647650b64977c8b17b72149ca27f3b0bb6044c2f5f9083e3dde2c316f47cb2&=&format=webp&width=552&height=600" alt="Fun GIF">
+        </div>
+    </section>
+
+    <section id="Favorites">
+        <h2>Favorites</h2>
+        <div style="margin:1%; align-items: center; justify-content: center; " class="image">
+            <img style="width: 290px;" src="https://media.discordapp.net/attachments/1050224029988028506/1177926029633925212/image.png?ex=6574481a&is=6561d31a&hm=dc95cba843c97028aff1a50d294ff8b52cc95cd4a794b4311c9995d0a99cfc4a&=&format=webp&width=600&height=600" alt="favorites">
+            <img style="width: 290px;"src="https://media.discordapp.net/attachments/1050224029988028506/1177925717082775552/image.png?ex=657447cf&is=6561d2cf&hm=f24266464d71d13cd091e1cc4542331170608c53f43f6b8ff3ec393c337ea5be&=&format=webp&width=600&height=600" alt="favorites">
+            <img style="width: 290px;"src="https://media.discordapp.net/attachments/1050224029988028506/1177926220340539522/image.png?ex=65744847&is=6561d347&hm=936c7ee068686322f217368dbe06e11c4276f15cb523eae0b09a0e9e1662d00f&=&format=webp&width=600&height=600" alt="favorites">
+        </div>
+    </section>
+    <section id="Hobbies">
+        <h2>Hobbies</h2>
+        <div style="margin:1%; align-items: center; justify-content: center; " class="image">
+            <img style=" width: 290px;   border-radius: 50%; margin: 2%; background-color: rgb(0, 0, 0); " src="https://i.pinimg.com/236x/5b/fa/7b/5bfa7b0e5198918e41056c9b31297fa8.jpg" alt="naddie">
+            <img style=" width: 290px;  border-radius: 50%; margin: 2%; background-color: rgb(0, 0, 0); " src="https://i.pinimg.com/564x/57/76/e4/5776e470f40062d2045cbbabe263f565.jpg" alt="naddie">
+            <img style=" width: 290px;  border-radius: 50%; margin: 2%; background-color: rgb(0, 0, 0); " src="https://media.discordapp.net/attachments/1050224029988028506/1178014329933672489/image.png?ex=65749a56&is=65622556&hm=8ae44b31f969527c609bb90fa1edf0dc948e1a645d226326de5d19978ffc299d&=&format=webp&width=700&height=537" alt="naddie">
+        </div>
+    </section>
+
+    <section id="Playlist">
+        <h2>Playlist</h2>
+        <div>
+                    <iframe style="margin-left: 8%; border-radius:12px; padding:2px;  align-items: center;" src="https://open.spotify.com/embed/track/2LlOeW5rVcvl3QcPNPcDus?utm_source=generator" width="430px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="margin-left: 8%;border-radius:12px; padding:2px;  align-items: center;" src="https://open.spotify.com/embed/track/01iNOMVE89uKaurFTDZX2Y?utm_source=generator" width="430px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="margin-left: 8%;border-radius:12px; padding:2px;  align-items: center;" src="https://open.spotify.com/embed/track/4kDjkFIzZK3MG97Y1yQ3Nm?utm_source=generator" width="430px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+                    <iframe style="margin-left: 8%;border-radius:12px; padding:2px;  align-items: center;" src="https://open.spotify.com/embed/track/3iBgrkexCzVuPy4O9vx7Mf?utm_source=generator" width="430px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="margin-left: 8%;border-radius:12px; padding:2px;  align-items: center;" src="https://open.spotify.com/embed/track/6qL5UWxRSQYml9O99ozoLv?utm_source=generator" width="430px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="margin-left: 8%;border-radius:12px; padding:2px;  align-items: center;" src="https://open.spotify.com/embed/track/14YZcGhRR05BTYajt8f9u9?utm_source=generator" width="430px" height="175px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>               
+        </div>
+    </section>
+
+    <div style="margin-left: 5%;" class="social-icons">
+        <a href="https://www.instagram.com/heynaddie_/" target="_blank" title="Instagram"><img src="https://i.pinimg.com/564x/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.jpg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@nadinelustre" target="_blank" title="Twitter"><img src="https://i.pinimg.com/564x/ba/61/72/ba617232630fd5cfb505577a25eb8823.jpg" alt="TikTok"></a>
+        <a href="https://www.facebook.com/domingoturo" target="_blank" title="Facebook"><img src="https://i.pinimg.com/564x/b7/63/69/b763699fd1fa3bfb374442593ae642e1.jpg" alt="Facebook"></a>
+    </div>
+
+    <footer>
+        <p style=" font: size 20px; margin-left: 2%; align-items: center; justify-content: center; margin-left: 5%; background: none;">Copyright © 2023 Domingo Turo. All rights reserved</p>
+    </footer>
+</body>
 </html>
